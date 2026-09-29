@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- esto le dice al navegador que es html5 -->
+<html lang="es">
+<!-- aqui empieza toda la pagina, lang es pa decir que esta en español -->
+
+<head>
+    <!-- aqui va la info que no se ve en la pagina, solo configuracion -->
+    <meta charset="UTF-8">
+    <!-- esto es pa que los acentos y la ñ se vean bien -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- esto es pa que se vea bien en el cel tambien -->
+    <title>Sistema de Calificaciones</title>
+    <!-- este es el titulo que sale en la pestaña del navegador -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- aqui conecto el archivo de estilos pa que agarre el diseño -->
+</head>
+
+<body>
+<!-- aqui empieza todo lo que si se ve en la pagina -->
+
+    <div class="contenedor">
+    <!-- esta caja es la que envuelve todo el formulario -->
+        <h1>Sistema de Calificaciones</h1>
+        <!-- este es el titulo grande de arriba -->
+        <p>Captura las calificaciones del alumno</p>
+        <!-- este es el texto chico debajo del titulo -->
+       
+        <div class="formulario">
+        <!-- aqui adentro va todo el formulario -->
+
+            <label for="nombre">Nombre del alumno:</label>
+            <!-- esta es la etiqueta que dice que va en el input de abajo -->
+            <input type="text" id="nombre" placeholder="Escribe el nombre">
+            <!-- aqui escribo el nombre del alumno, el id es pa que el js lo encuentre -->
+
+            <label for="edad">Edad:</label>
+            <!-- etiqueta de la edad -->
+            <input type="number" id="edad" min="0">
+            <!-- input de la edad, solo acepta numeros y no negativos -->
+
+            <label for="calificacion1">Calificación 1:</label>
+            <!-- etiqueta de la primer calificacion -->
+            <input type="number" id="calificacion1" min="0" max="10">
+            <!-- input de la calificacion 1, va de 0 a 10 -->
+
+            <label for="calificacion2">Calificación 2:</label>
+            <!-- etiqueta de la segunda calificacion -->
+            <input type="number" id="calificacion2" min="0" max="10">
+            <!-- input de la calificacion 2 -->
+
+            <label for="calificacion3">Calificación 3:</label>
+            <!-- etiqueta de la tercer calificacion -->
+            <input type="number" id="calificacion3" min="0" max="10">
+            <!-- input de la calificacion 3 -->
+
+            <label for="calificacion4">Calificación 4:</label>
+            <!-- etiqueta de la cuarta calificacion -->
+            <input type="number" id="calificacion4" min="0" max="10">
+            <!-- input de la calificacion 4 -->
+
+            <button onclick="calcularPromedio()">
+                Calcular promedio
+            </button>
+            <!-- este boton llama la funcion que calcula el promedio y lo muestra -->
+
+            <button onclick="agregarAlumno()">
+                Agregar alumno
+            </button>
+            <!-- este boton guarda al alumno en la lista -->
+
+            <button onclick="limpiarFormulario()">
+                Limpiar
+            </button>
+            <!-- este boton solo borra lo que escribi en el formulario -->
+
+            <button onclick="restablecerTodo()">
+                Restablecer
+            </button>
+            <!-- este boton borra todo incluyendo la lista de alumnos -->
+
+        </div>
+        <div id="resultado" class="resultado">
+        <!-- aqui es donde se va a mostrar el resultado o la lista de alumnos -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- aqui conecto el archivo de js pa que jalen las funciones de los botones -->
+</body>
+
+</html>

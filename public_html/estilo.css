@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    /* esto hace que el padding y el border no le sumen tamaño extra a las cajas */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* la letra que va a usar toda la pagina */
+    background-color: #f2f2f2;
+    /* el fondo gris clarito de toda la pagina */
+    margin: 0;
+    /* quita el margen que trae el navegador por default */
+    padding: 0;
+    /* quita el padding que trae el navegador por default */
+}
+
+.contenedor {
+    width: 450px;
+    /* el ancho de la caja blanca del formulario */
+    margin: 50px auto;
+    /* la separa 50px de arriba y la centra horizontal */
+    background-color: white;
+    /* el fondo blanco de la caja */
+    padding: 30px;
+    /* el espacio de adentro pa que no se pegue el texto a la orilla */
+    border-radius: 10px;
+    /* las esquinas redondeaditas */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    /* la sombrita abajo pa que se vea que flota */
+}
+
+h1 {
+    text-align: center;
+    /* centra el titulo grande */
+    margin-bottom: 10px;
+    /* le deja poquito espacio abajo */
+}
+
+p {
+    text-align: center;
+    /* centra el texto chico */
+    color: #666;
+    /* le pone un gris pa que no sea tan fuerte como el negro */
+}
+
+.formulario {
+    display: flex;
+    /* pa que los elementos de adentro se acomoden en fila o columna */
+    flex-direction: column;
+    /* aqui dice que sea en columna, o sea uno debajo del otro */
+}
+
+label {
+    margin-top: 15px;
+    /* separa cada etiqueta del elemento de arriba */
+    margin-bottom: 5px;
+    /* separa la etiqueta de su input de abajo */
+    font-weight: bold;
+    /* pone las etiquetas en negritas */
+}
+
+input {
+    padding: 10px;
+    /* espacio de adentro del input pa que no se vea apretado */
+    border: 1px solid #ccc;
+    /* el borde gris clarito del input */
+    border-radius: 5px;
+    /* esquinas redondeaditas del input */
+    font-size: 16px;
+    /* el tamaño de letra de lo que escribes */
+}
+
+button {
+    margin-top: 25px;
+    /* separa el boton de lo que este arriba */
+    padding: 12px;
+    /* espacio de adentro del boton */
+    background-color: #007bff;
+    /* el azul de fondo del boton */
+    color: white;
+    /* el texto del boton en blanco */
+    border: none;
+    /* le quita el borde feo que trae por default */
+    border-radius: 5px;
+    /* esquinas redondeaditas del boton */
+    font-size: 16px;
+    /* tamaño de letra del boton */
+    cursor: pointer;
+    /* pa que el mouse se vea como manita al pasar encima */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* cuando le pasas el mouse encima se pone mas oscuro */
+}
+
+.resultado {
+    margin-top: 25px;
+    /* separa la caja de resultado de lo que este arriba */
+    padding: 15px;
+    /* espacio de adentro de la caja de resultado */
+    text-align: center;
+    /* centra el texto de adentro */
+    border-radius: 5px;
+    /* esquinas redondeaditas */
+    font-size: 18px;
+    /* tamaño de letra un poco mas grande pa que se note el resultado */
+}
